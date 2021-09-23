@@ -7,3 +7,5 @@ server.use(boryParser.urlencoded({extended: true}))
 server.use(boryParser.json())
 
 server.listen(port, backlog)
+
+module.exports = server
