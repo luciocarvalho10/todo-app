@@ -14,7 +14,7 @@ module.exports = {
   resolve: {
     extensions: ['', '.js', '.jsx'],
     alias: {
-      module: __dirname + '/node_modules'
+      modules: __dirname + '/node_modules'
     }
   },
   plugins: [new ExtractTextPlugin('app.css')],
@@ -25,13 +25,13 @@ module.exports = {
         loader: 'babel-loader',
         exclude: /node_modules/,
         query: {
-          preset: ['es2015', 'react'],
+          presets: ['es2015', 'react'],
           plugins: ['transform-object-rest-spread']
         }
       },
       {
         test: /\.css$/,
-        loader: ExtractTextPlugin.extract(['style-loader', 'css-loader'])
+        loader: ExtractTextPlugin.extract('style-loader', 'css-loader')
       },
       {
         test: /\.woff|.woff2|.ttf|.eot|.svg*.*$/,
