@@ -15,11 +15,16 @@ export default class Todo extends Component {
     this.handleApp = this.handleApp.bind(this)
     this.handleChange = this.handleChange.bind(this)
     this.handleSearch = this.handleSearch.bind(this)
+    this.handleClear = this.handleClear.bind(this)
 
     this.handleRemove = this.handleRemove.bind(this)
     this.handleAsDone = this.handleAsDone.bind(this)
     this.handleAsPending = this.handleAsPending.bind(this)
 
+    this.refresh()
+  }
+
+  handleClear() {
     this.refresh()
   }
 
@@ -74,6 +79,7 @@ export default class Todo extends Component {
           handleAdd={this.handleApp}
           handleChange={this.handleChange}
           handleSearch={this.handleSearch}
+          handleClear={this.handleClear}
         />
         <TodoList
           list={this.state.list}
