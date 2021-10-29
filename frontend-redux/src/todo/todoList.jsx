@@ -45,6 +45,6 @@ const TodoList = props => {
   )
 }
 
-const mapStoreToProps = state => ({ list: state.todo.list })
+const mapStoreToProps = state => ({ list: state.list })
 
 export default connect(mapStoreToProps)(TodoList)

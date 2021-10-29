@@ -9,5 +9,5 @@ export const changeDescription = event => ({
 
 export const searchList = () => {
   const req = axios.get(`${URL}?sort=-createdAt`)
-  return { type: 'LIST_CHANGED', payload: req }
+  return { type: 'LIST_SEARCHED', payload: req }
 }
