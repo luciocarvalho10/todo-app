@@ -2,9 +2,9 @@ const INITIAL_STATE = []
 
 export const list = (state = INITIAL_STATE, action) => {
   switch (action.type) {
-    case 'LIST_SEARCHED':
+    case 'TODO_SEARCHED':
       return action.payload.data
-    case 'ADD_LIST':
+    case 'TODO_ADDED':
       return action.payload
     default:
       return state
