@@ -1,10 +1,12 @@
-const INITIAL_STATE = 'ola'
+const INITIAL_STATE = ''
 
-export const description = (state = INITIAL_STATE, action) => {
-  switch(action.type) {
+const description = (state = INITIAL_STATE, action) => {
+  switch (action.type) {
     case 'DESCRIPTION_CHANGED':
       return action.payload
     default:
       return state
   }
 }
+
+export { description }

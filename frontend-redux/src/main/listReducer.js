@@ -1,6 +1,6 @@
 const INITIAL_STATE = []
 
-export const list = (state = INITIAL_STATE, action) => {
+const list = (state = INITIAL_STATE, action) => {
   switch (action.type) {
     case 'TODO_SEARCHED':
       return action.payload.data
@@ -10,3 +10,5 @@ export const list = (state = INITIAL_STATE, action) => {
       return state
   }
 }
+
+export { list }
