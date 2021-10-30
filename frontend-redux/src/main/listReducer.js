@@ -3,7 +3,7 @@ const INITIAL_STATE = []
 const list = (state = INITIAL_STATE, action) => {
   switch (action.type) {
     case 'TODO_SEARCHED':
-      return action.payload.data
+      return action.payload
     case 'TODO_ADDED':
       return action.payload
     default:
