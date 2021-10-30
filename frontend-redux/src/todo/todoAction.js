@@ -15,7 +15,7 @@ const search = () => {
 const add = description => dispatch =>
   axios
     .post(URL, { description })
-    .then(res => dispatch({ type: 'TODO_ADDED', payload: res.data }))
+    .then(res => dispatch(clear()))
     .then(res => dispatch(search()))
 
 const markAsDone = todo => dispatch =>
@@ -32,4 +32,5 @@ const markAsPending = todo => dispatch =>
 const remove = todo => dispatch =>
   axios.delete(`${URL}/${todo._id}`).then(resp => dispatch(search()))
 
-export { changeDescription, add, search, markAsDone, markAsPending, remove }
+const clear = () => ({type: 'TODO_CLEAR'})
+export { changeDescription, add, search, markAsDone, markAsPending, remove, clear }
