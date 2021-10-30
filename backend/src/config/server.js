@@ -1,4 +1,4 @@
-const port = 3003
+const port = 3000
 const backlog = () => console.log(`BACKEND is running on port ${port}`)
 
 const boryParser = require('body-parser')
